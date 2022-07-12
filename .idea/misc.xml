@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.227" />
         <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/drawable-v24/shape.xml" value="0.168" />
-        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/layout/start_page.xml" value="0.25" />
+        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/drawable/ic_launcher_background.xml" value="0.227" />
+        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/layout/info_page.xml" value="0.25" />
+        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/layout/start_page.xml" value="0.22" />
+        <entry key="..\:/Users/Danila/AndroidStudioProjects/BgRem/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.227" />
       </map>
     </option>
   </component>

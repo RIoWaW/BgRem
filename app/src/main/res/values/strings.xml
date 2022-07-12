@@ -6,4 +6,12 @@
     <string name="use_conditions">Use conditions</string>
     <string name="and">and</string>
     <string name="privacy_policy">Privacy policy</string>
+    <string name="info_title">Зачем Вам BgRem</string>
+    <string name="info_text">BgRem автоматически уберет фон у видео или фото</string>
+    <string name="info_slogan">Измените Ваше видео и фото с</string>
+    <string name="info_support">Если остались вопросы или есть предложения,</string>
+    <string name="write">пишите -</string>
+    <string name="email">support@deelvin.com</string>
+    <string name="version_name">Версия</string>
+    <string name="version_number">1.0.1</string>
 </resources>
