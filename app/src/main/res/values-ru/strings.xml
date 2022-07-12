@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BgRem</string>
+    <string name="title_of_start_page">Автоматическая замена фона</string>
+    <string name="start_button">начнем</string>
+    <string name="i_agree">Приступая к работе, я соглашаюсь с</string>
+    <string name="use_conditions">Условия использования</string>
+    <string name="and"> и</string>
+    <string name="privacy_policy">Политикий конфиденциальности</string>
+</resources>
