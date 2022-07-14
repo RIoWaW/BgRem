@@ -13,4 +13,7 @@
     <string name="info_support">Если остались вопросы или есть предложения,</string>
     <string name="write">пишите -</string>
     <string name="version_name">Версия</string>
+    <string name="gallery">Галерея</string>
+    <string name="camera">Камера</string>
+    <string name="cancel">Отменить</string>
 </resources>

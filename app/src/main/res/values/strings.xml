@@ -14,4 +14,8 @@
     <string name="email">support@deelvin.com</string>
     <string name="version_name">Версия</string>
     <string name="version_number">1.0.1</string>
+    <string name="main_text">Загрузите файл</string>
+    <string name="gallery">Галерея</string>
+    <string name="camera">Камера</string>
+    <string name="cancel">Отменить</string>
 </resources>
