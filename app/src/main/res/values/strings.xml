@@ -3,7 +3,7 @@
     <string name="title_of_start_page">Automatic background replacement</string>
     <string name="start_button">start</string>
     <string name="i_agree">Getting started, I agree with</string>
-    <string name="use_conditions">Use conditions</string>
+    <string name="terms_of_use">Terms of use</string>
     <string name="and">and</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="info_title">Зачем Вам BgRem</string>
@@ -11,11 +11,16 @@
     <string name="info_slogan">Измените Ваше видео и фото с</string>
     <string name="info_support">Если остались вопросы или есть предложения,</string>
     <string name="write">пишите -</string>
-    <string name="email">support@deelvin.com</string>
+    <string name="email" translatable="false">support@deelvin.com</string>
     <string name="version_name">Версия</string>
-    <string name="version_number">1.0.1</string>
+    <string name="version_number" translatable="false">1.0.1</string>
     <string name="main_text">Загрузите файл</string>
     <string name="gallery">Галерея</string>
     <string name="camera">Камера</string>
     <string name="cancel">Отменить</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="bg" translatable="false">Bg</string>
+    <string name="rem" translatable="false">Rem</string>
+    <string name="splash_title">Автоматическая замена фона</string>
+    <string name="splash_text"><![CDATA[Видео & Фото]]></string>
 </resources>

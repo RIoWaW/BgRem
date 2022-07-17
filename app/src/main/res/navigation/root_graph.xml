@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_graph"
+    app:startDestination="@id/splashPage">
+
+    <fragment
+        android:id="@+id/startPage"
+        android:name="com.tuocwizards.bgrem.pages.StartPage"
+        android:label="StartPage" >
+        <action
+            android:id="@+id/action_startPage_to_infoPage"
+            app:destination="@id/infoPage" />
+        <action
+            app:popUpTo="@id/root_graph"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_startPage_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoPage"
+        android:name="com.tuocwizards.bgrem.pages.InfoPage"
+        android:label="InfoPage" />
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.tuocwizards.bgrem.pages.MainPage"
+        android:label="MainPage" >
+        <action
+            android:id="@+id/action_mainPage_to_infoPage"
+            app:destination="@id/infoPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashPage"
+        android:name="com.tuocwizards.bgrem.pages.SplashPage"
+        android:label="splash_page"
+        tools:layout="@layout/splash_page" >
+        <action
+            android:id="@+id/action_splashPage_to_startPage"
+            app:destination="@id/startPage" />
+        <action
+            android:id="@+id/action_splashPage_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
+</navigation>

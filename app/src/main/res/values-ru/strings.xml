@@ -4,7 +4,7 @@
     <string name="title_of_start_page">Автоматическая замена фона</string>
     <string name="start_button">начнем</string>
     <string name="i_agree">Приступая к работе, я соглашаюсь с</string>
-    <string name="use_conditions">Условия использования</string>
+    <string name="terms_of_use">Условия использования</string>
     <string name="and"> и</string>
     <string name="privacy_policy">Политикий конфиденциальности</string>
     <string name="info_title">Зачем Вам BgRem</string>
@@ -16,4 +16,6 @@
     <string name="gallery">Галерея</string>
     <string name="camera">Камера</string>
     <string name="cancel">Отменить</string>
+    <string name="splash_title">Автоматическая замена фона</string>
+    <string name="splash_text"><![CDATA[Видео & Фото]]></string>
 </resources>
