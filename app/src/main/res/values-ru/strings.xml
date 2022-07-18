@@ -18,4 +18,7 @@
     <string name="cancel">Отменить</string>
     <string name="splash_title">Автоматическая замена фона</string>
     <string name="splash_text"><![CDATA[Видео & Фото]]></string>
+    <string name="note_title">Примечание.</string>
+    <string name="note_text">Длина видео - до 30 секунд</string>
+    <string name="select_background">Выберете фон</string>
 </resources>

@@ -1,4 +1,10 @@
 package com.tuocwizards.bgrem.viewmodels
 
-class MainPageVM {
+import androidx.lifecycle.ViewModel
+
+class MainPageVM: ViewModel() {
+
+    fun sendPhoto() {
+
+    }
 }

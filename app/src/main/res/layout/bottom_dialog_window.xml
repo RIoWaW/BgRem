@@ -3,9 +3,32 @@
     android:id="@+id/bottom_dialog_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="25dp"
+    android:paddingVertical="25dp"
     android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/note_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_title"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/note_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        />
+
+    <TextView
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/note_text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/note_title"
+        app:layout_constraintBaseline_toBaselineOf="@id/note_title"
+        />
 
     <ImageButton
         android:id="@+id/gallery_button"

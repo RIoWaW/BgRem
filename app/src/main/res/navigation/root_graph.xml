@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_mainPage_to_infoPage"
             app:destination="@id/infoPage" />
+        <action
+            android:id="@+id/action_mainPage_to_selectBackgroundPage"
+            app:destination="@id/selectBackgroundPage" />
     </fragment>
     <fragment
         android:id="@+id/splashPage"
@@ -42,4 +45,9 @@
             android:id="@+id/action_splashPage_to_mainPage"
             app:destination="@id/mainPage" />
     </fragment>
+    <fragment
+        android:id="@+id/selectBackgroundPage"
+        android:name="com.tuocwizards.bgrem.pages.SelectBackgroundPage"
+        android:label="select_background_page"
+        tools:layout="@layout/select_background_page" />
 </navigation>

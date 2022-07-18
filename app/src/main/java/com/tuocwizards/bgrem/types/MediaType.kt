@@ -1,4 +1,5 @@
 package com.tuocwizards.bgrem.types
 
-enum class mediaType {
+enum class MediaType {
+    PHOTO, SHORT_VIDEO
 }

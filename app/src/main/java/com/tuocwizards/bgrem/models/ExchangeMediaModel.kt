@@ -1,4 +1,12 @@
 package com.tuocwizards.bgrem.models
 
-class ExchengeMediaModel {
+class ExchangeMediaModel {
+
+    fun sendPhoto() {
+
+    }
+
+    fun sendVideo() {
+        
+    }
 }
