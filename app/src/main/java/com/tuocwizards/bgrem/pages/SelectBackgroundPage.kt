@@ -17,24 +17,13 @@ class SelectBackgroundPage : Fragment() {
 
     private lateinit var binding: SelectBackgroundPageBinding
 
-    val getAction : ActivityResultLauncher<String> = registerForActivityResult(ActivityResultContracts.GetContent()) { imgUri: Uri? ->
-        binding.photo.load(imgUri)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = SelectBackgroundPageBinding.inflate(inflater, container, false)
 
         return binding.root
     }
-//
-//    companion object {
-//        val getAction : ActivityResultLauncher<String> = registerForActivityResult(ActivityResultContracts.GetContent()) { imgUri: Uri? ->
-//            binding.photo.load(imgUri)
-//        }
-//    }
 
 }
