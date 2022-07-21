@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import coil.load
 import com.google.android.material.tabs.TabLayoutMediator
 import com.tuocwizards.bgrem.R
 import com.tuocwizards.bgrem.databinding.SelectBackgroundPageBinding
@@ -13,12 +15,18 @@ class SelectBackgroundPage : BaseFragment<SelectBackgroundPageBinding>(
     SelectBackgroundPageBinding::inflate
 ) {
 
+    private val PATH = "pathKey"
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = SelectBackgroundPageBinding.inflate(inflater)
-        binding.viewpager.isNestedScrollingEnabled = false
+        binding.backButton.setOnClickListener{
+            findNavController().navigateUp()
+        }
+        val path = arguments?.getString(PATH)
+        binding.photo.load(path)
         binding.viewpager.adapter = ViewPagerAdapter(activity!!)
         TabLayoutMediator(binding.tabLayout, binding.viewpager){
             tab, position ->

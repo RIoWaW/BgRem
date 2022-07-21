@@ -22,7 +22,7 @@ import com.tuocwizards.bgrem.viewmodels.MainPageVM
 class MainPage: BaseFragment<MainPageBinding>(
     MainPageBinding::inflate
 ) {
-
+    private val PATH = "pathKey"
     private val viewModel: MainPageVM by viewModels()
 
     override fun onCreateView(
@@ -65,9 +65,10 @@ class MainPage: BaseFragment<MainPageBinding>(
         ActivityResultContracts.StartActivityForResult()) {
         try {
             viewModel.sendPhoto(it.data!!.data!!)
+            val data = Bundle().apply { putString(PATH, it.data!!.dataString) }
             //navigate on loaderPage and wait result
             //but I can't get response, so just navigate to SelectBackgroundPage
-            findNavController().navigate(R.id.action_mainPage_to_selectBackgroundPage)
+            findNavController().navigate(R.id.action_mainPage_to_selectBackgroundPage, data)
         }
         catch (e: Exception){
             Log.e("E", e.toString())
