@@ -18,14 +18,17 @@
     <string name="gallery">Галерея</string>
     <string name="camera">Камера</string>
     <string name="cancel">Отменить</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="bg" translatable="false">Bg</string>
     <string name="rem" translatable="false">Rem</string>
     <string name="splash_title">Автоматическая замена фона</string>
     <string name="splash_text"><![CDATA[Видео & Фото]]></string>
     <string name="note_title">Примечание.</string>
     <string name="note_text">Длина видео - до 30 секунд</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="select_background">Выберете фон</string>
+    <string name="next_step">Далее</string>
+    <string name="without_background">нет фона</string>
+    <string name="user_background">ваш фон</string>
+    <string name="color_background">цвет</string>
+    <string name="picture_background">картинка</string>
+    <string name="upload_background">Загрузить фон</string>
 </resources>

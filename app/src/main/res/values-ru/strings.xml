@@ -21,4 +21,11 @@
     <string name="note_title">Примечание.</string>
     <string name="note_text">Длина видео - до 30 секунд</string>
     <string name="select_background">Выберете фон</string>
+    <string name="next_step">Далее</string>
+    <string name="main_text">Загрузите файл</string>
+    <string name="without_background">нет фона</string>
+    <string name="user_background">ваш фон</string>
+    <string name="color_background">цвет</string>
+    <string name="picture_background">картинка</string>
+    <string name="upload_background">Загрузить фон</string>
 </resources>

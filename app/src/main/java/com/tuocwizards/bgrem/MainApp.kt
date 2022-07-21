@@ -18,6 +18,6 @@ class MainApp: Application() {
 val Context.mainComponent: MainComponent
     get() = when(this) {
         is MainApp -> mainComponent
-        else ->this.applicationContext.mainComponent
+        else -> this.applicationContext.mainComponent
     }
 

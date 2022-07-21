@@ -1,7 +1,7 @@
 package com.tuocwizards.bgrem.di
 
-import com.tuocwizards.bgrem.models.repositories.exchangebackground.BackgroundAPI
-import com.tuocwizards.bgrem.viewmodels.MainPageVM
+import com.tuocwizards.bgrem.models.repositories.exchange.background.BackgroundAPI
+import com.tuocwizards.bgrem.models.repositories.job.MediaModelAPI
 import dagger.Component
 import dagger.Module
 import dagger.Provides
@@ -14,15 +14,17 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [AppModule::class])
 interface MainComponent {
-
-    fun inject(viewModel: MainPageVM)
-    val retrofit: Retrofit
+    val backgroundAPI: BackgroundAPI
+    val mediaModelAPI: MediaModelAPI
 }
-
 
 @Module
 class AppModule {
 
+    @Provides
+    fun provideMediaModelAPI(retrofit: Retrofit): MediaModelAPI {
+        return retrofit.create(MediaModelAPI::class.java)
+    }
 
     @Provides
     fun provideBackgroundAPI(retrofit: Retrofit): BackgroundAPI {
@@ -51,6 +53,4 @@ class AppModule {
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         return httpLoggingInterceptor
     }
-
-
 }

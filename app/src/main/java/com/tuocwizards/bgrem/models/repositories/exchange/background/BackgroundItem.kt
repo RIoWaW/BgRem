@@ -1,4 +1,4 @@
-package com.tuocwizards.bgrem.models.repositories.exchangebackground
+package com.tuocwizards.bgrem.models.repositories.exchange.background
 
 data class BackgroundItem(
     val id: String?,

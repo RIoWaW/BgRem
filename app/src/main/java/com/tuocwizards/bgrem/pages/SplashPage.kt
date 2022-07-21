@@ -2,30 +2,35 @@ package com.tuocwizards.bgrem.pages
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.tuocwizards.bgrem.R
 import com.tuocwizards.bgrem.databinding.SplashPageBinding
+import com.tuocwizards.bgrem.viewmodels.SplashPageVM
 
-class SplashPage : Fragment() {
+class SplashPage : BaseFragment<SplashPageBinding>(
+    SplashPageBinding::inflate
+) {
 
     private val appPreferences = "settings"
-    private lateinit var binding: SplashPageBinding
+    private val viewModel: SplashPageVM by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = SplashPageBinding.inflate(inflater, container, false)
-        val isUserAgreeWithConditions = context!!.getSharedPreferences(appPreferences, Context.MODE_PRIVATE)
+        viewModel.getBackgrounds()
+        binding = SplashPageBinding.inflate(inflater)
+        val isUserAgreeWithConditions = context!!
+            .getSharedPreferences(appPreferences, Context.MODE_PRIVATE)
             .getBoolean("isUserAgreeWithConditions", false)
+
         if (isUserAgreeWithConditions) {
             goToNextPageWithAnimation(R.id.action_splashPage_to_mainPage)
-        }
-        else {
+        } else {
             goToNextPageWithAnimation(R.id.action_splashPage_to_startPage)
         }
 
@@ -45,13 +50,11 @@ class SplashPage : Fragment() {
                 .setStartDelay(400)
                 .withEndAction {
                     goByAction(actionId)
-                }
-                .start()
+                }.start()
         }
     }
 
     private fun goByAction(actionId: Int) {
         findNavController().navigate(actionId)
     }
-
 }

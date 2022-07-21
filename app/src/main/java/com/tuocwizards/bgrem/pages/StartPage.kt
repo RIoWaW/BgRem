@@ -6,23 +6,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.tuocwizards.bgrem.R
 import com.tuocwizards.bgrem.databinding.StartPageBinding
+import com.tuocwizards.bgrem.models.datastorages.storages.LinksStorage
 
-class StartPage: Fragment() {
+class StartPage: BaseFragment<StartPageBinding>(
+    StartPageBinding::inflate
+) {
 
     private val appPreferences = "settings"
-    private lateinit var binding: StartPageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = StartPageBinding.inflate(inflater, container, false)
-
+        binding = StartPageBinding.inflate(inflater)
         binding.apply {
             startButton.setOnClickListener {
                 agreeWithConditions()
@@ -44,12 +44,12 @@ class StartPage: Fragment() {
     }
 
     private fun openTermsOfUse() {
-        val intent = Intent.parseUri("https://bgrem.deelvin.com/terms_of_use/?app=true", Intent.URI_INTENT_SCHEME)
+        val intent = Intent.parseUri(LinksStorage.termsOfUseLink, Intent.URI_INTENT_SCHEME)
         startActivity(intent)
     }
 
     private fun openPrivacyPolicy() {
-        val intent = Intent.parseUri("https://bgrem.deelvin.com/privacy_policy/?app=true", Intent.URI_INTENT_SCHEME)
+        val intent = Intent.parseUri(LinksStorage.privacyPolicyLink, Intent.URI_INTENT_SCHEME)
         startActivity(intent)
     }
 }
