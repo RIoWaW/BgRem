@@ -18,6 +18,7 @@ class SelectBackgroundPage : BaseFragment<SelectBackgroundPageBinding>(
         savedInstanceState: Bundle?
     ): View {
         binding = SelectBackgroundPageBinding.inflate(inflater)
+        binding.viewpager.isNestedScrollingEnabled = false
         binding.viewpager.adapter = ViewPagerAdapter(activity!!)
         TabLayoutMediator(binding.tabLayout, binding.viewpager){
             tab, position ->

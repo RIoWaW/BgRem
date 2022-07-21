@@ -7,20 +7,23 @@ import com.tuocwizards.bgrem.models.repositories.exchange.background.BackgroundI
 class BackgroundTabItemVM: ViewModel() {
 
     fun getColorBackground(): List<BackgroundItem> {
-        val tmp = BackgroundStorage.backgrounds.filter { it.group == "color" }
-        return tmp
+        return BackgroundStorage.backgrounds.filter { it.group == "color" }
     }
 
+    //add it.group == "video" in filter just to increase amount of elements
+    //after adding logic for video this fun will be separated
     fun getPictureBackground(): List<BackgroundItem> {
-        val tmp = BackgroundStorage.backgrounds.filter {
+        return BackgroundStorage.backgrounds.filter {
             it.group == "image" || it.group == "video"
         }
-        return tmp
     }
 
     fun getUserBackground(): List<BackgroundItem> {
         return BackgroundStorage.backgrounds.filter { it.group == "user" }
     }
 
+    fun addUserBackground(path: String) {
+        BackgroundStorage.addUserImageBackground(path)
+    }
 
 }

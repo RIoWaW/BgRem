@@ -1,9 +1,13 @@
 package com.tuocwizards.bgrem.pages
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.tuocwizards.bgrem.databinding.BackgroundTabItemBinding
@@ -48,6 +52,10 @@ class BackgroundTabItem : BaseFragment<BackgroundTabItemBinding>(
         adapter.backgrounds = viewModel.getUserBackground()
         binding.backgroundsRecyclerView.adapter = adapter
         binding.uploadBackgroundButton.visibility = View.VISIBLE
+        binding.uploadBackgroundButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            uploadPhoto.launch(intent)
+        }
     }
 
     private fun setColorBackgroundContent(adapter: BackgroundsAdapter) {
@@ -58,6 +66,19 @@ class BackgroundTabItem : BaseFragment<BackgroundTabItemBinding>(
     private fun setPictureBackgroundContent(adapter: BackgroundsAdapter) {
         adapter.backgrounds = viewModel.getPictureBackground()
         binding.backgroundsRecyclerView.adapter = adapter
+    }
+
+    private val uploadPhoto = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()) {
+        try {
+            viewModel.addUserBackground(it.data!!.dataString!!)
+            val adapter = BackgroundsAdapter()
+            adapter.backgrounds = viewModel.getUserBackground()
+            binding.backgroundsRecyclerView.adapter = adapter
+        }
+        catch (e: Exception){
+            Log.e("E", e.toString())
+        }
     }
 
     companion object {
